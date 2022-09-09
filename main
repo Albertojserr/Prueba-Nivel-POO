@@ -1,4 +1,3 @@
-from vehiculos.vehiculo import Vehiculo
 from vehiculos.coche import Coche
 from vehiculos.bicicleta import Bicicleta
 from vehiculos.camioneta import Camioneta
