@@ -1,0 +1,28 @@
+from vehiculos.vehiculo import Vehiculo
+from vehiculos.coche import Coche
+from vehiculos.bicicleta import Bicicleta
+from vehiculos.camioneta import Camioneta
+from vehiculos.motocicleta import Motocicleta
+
+if __name__ =="__main__":
+
+    c = Coche("azul", 4, 150, 1200)
+    camion= Camioneta("verde",6, 150, 1500,3000)
+    bici=Bicicleta("gris",2,"deportiva")
+    moto=Motocicleta("rojo",2,"urbana",180,2000)
+    vehiculos=[]
+    vehiculos.append(c)
+    vehiculos.append(camion)
+    vehiculos.append(bici)
+    vehiculos.append(moto)
+    def catalogar(lista,rueda):
+        numero=0
+        list=[]
+        for vehiculo in lista:
+            if rueda==vehiculo.ruedas:
+                list.append(vehiculo)
+                numero+=1
+        print("Se han encontrado {} vehículos con {} ruedas:".format(numero,rueda))
+        for vehiculo in list:
+            print(type(vehiculo).__name__,vehiculo)
+    catalogar(vehiculos,2)
